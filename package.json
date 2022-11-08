@@ -1,0 +1,37 @@
+{
+  "name": "mantine-gatsby-template",
+  "version": "1.0.0",
+  "description": "Mantine + Gatsby.js template",
+  "main": "index.js",
+  "repository": "git@github.com:mantinedev/mantine-gatsby-template.git",
+  "author": "Vitaly Rtishchev <rtivital@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "start": "gatsby develop -H 0.0.0.0 -p 5001",
+    "serve": "gatsby serve -H 0.0.0.0 -p 5002"
+  },
+  "dependencies": {
+    "@emotion/react": "11.10.5",
+    "@mantine/core": "5.6.4",
+    "@mantine/hooks": "5.6.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.42.0",
+    "@typescript-eslint/parser": "5.42.0",
+    "eslint": "8.26.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-mantine": "2.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-react": "7.31.10",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "gatsby": "4.24.7",
+    "gatsby-plugin-mantine": "5.0.0",
+    "typescript": "4.8.4"
+  }
+}
