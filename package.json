@@ -1,10 +1,10 @@
 {
-  "name": "mantine-gatsby-template",
+  "name": "personal-pages-gatsby",
   "version": "1.0.0",
   "description": "Mantine + Gatsby.js template",
   "main": "index.js",
   "repository": "git@github.com:mantinedev/mantine-gatsby-template.git",
-  "author": "Vitaly Rtishchev <rtivital@gmail.com>",
+  "author": "Quan Pham <doraemonfanclub@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -31,7 +31,7 @@
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-react": "7.31.10",
     "eslint-plugin-react-hooks": "4.6.0",
-    "gatsby": "4.24.7",
+    "gatsby": "5.0.0",
     "gatsby-plugin-mantine": "5.0.0",
     "typescript": "4.8.4"
   }
