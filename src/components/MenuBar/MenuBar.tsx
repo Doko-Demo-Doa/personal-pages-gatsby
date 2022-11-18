@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, createStyles, Group, Space, Text, Title } from '@mantine/core';
+import { Box, createStyles, Group, MediaQuery, Space, Text, Title } from '@mantine/core';
 
 const items = [
   {
@@ -44,13 +44,17 @@ const MenuBar = () => {
 
       <Space sx={{ flexGrow: 2 }} />
 
-      {items.map((n, idx) => (
-        <Box key={idx} className={classes.item}>
-          <Text size="lg" weight="bolder" color="white">
-            {n.label}
-          </Text>
-        </Box>
-      ))}
+      <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
+        <Group sx={{ height: '100%' }}>
+          {items.map((n, idx) => (
+            <Box key={idx} className={classes.item}>
+              <Text size="lg" weight="bolder" color="white">
+                {n.label}
+              </Text>
+            </Box>
+          ))}
+        </Group>
+      </MediaQuery>
     </Group>
   );
 };

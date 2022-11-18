@@ -1,4 +1,4 @@
 import React from 'react';
-import Section1 from '../Sections/Sect1';
+import Gallery from '../Gallery/Gallery';
 
-export const Home = () => <Section1 />;
+export const Home = () => <Gallery />;
