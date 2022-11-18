@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Group, Space, Title } from '@mantine/core';
+import { Box, createStyles, Group, Space, Text, Title } from '@mantine/core';
 
 const items = [
   {
@@ -16,18 +16,27 @@ const items = [
   },
 ];
 
+const useStyles = createStyles(() => ({
+  item: {
+    display: 'flex',
+    alignItems: 'center',
+    height: '100%',
+    padding: '0 3.3rem',
+    margin: 'auto 0',
+    borderLeft: '1px dashed brown',
+  },
+}));
+
 const MenuBar = () => {
-  console.log('eee');
+  const { classes } = useStyles();
+
   return (
-    <Group sx={{ height: '8rem', backgroundColor: '#5c453f' }}>
+    <Group sx={{ height: '6rem', backgroundColor: '#5c453f' }}>
       <Box px={60}>
         <Title
           variant="gradient"
           gradient={{ from: 'white', to: 'yellow', deg: 45 }}
-          sx={{ fontFamily: 'Dancing Script, sans-serif' }}
-          ta="center"
-          fz="xl"
-          fw={700}
+          sx={{ fontFamily: 'Dancing Script, sans-serif', fontSize: '2em' }}
         >
           Kuon & Leah
         </Title>
@@ -36,7 +45,11 @@ const MenuBar = () => {
       <Space sx={{ flexGrow: 2 }} />
 
       {items.map((n, idx) => (
-        <Box key={idx}>{n.label}</Box>
+        <Box key={idx} className={classes.item}>
+          <Text size="lg" weight="bolder" color="white">
+            {n.label}
+          </Text>
+        </Box>
       ))}
     </Group>
   );

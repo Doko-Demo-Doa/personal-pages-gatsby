@@ -17,7 +17,22 @@ export function Layout({ children }: LayoutProps) {
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       {/* Add your theme here */}
-      <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
+      <MantineProvider
+        theme={{
+          colorScheme,
+          fontFamily: 'Quicksand, sans-serif',
+          fontFamilyMonospace: 'Monaco, Courier, monospace',
+          headings: { fontFamily: 'Greycliff CF, sans-serif' },
+          globalStyles: (theme) => ({
+            body: {
+              ...theme.fn.fontStyles(),
+              backgroundColor: 'gray',
+            },
+          }),
+        }}
+        withGlobalStyles
+        withNormalizeCSS
+      >
         <Container size="lg" mt="4rem">
           <MenuBar />
           {children}
