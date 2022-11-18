@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHotkeys } from '@mantine/hooks';
-import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core';
+import { MantineProvider, ColorSchemeProvider, ColorScheme, Container } from '@mantine/core';
+import MenuBar from '../MenuBar/MenuBar';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,7 +18,10 @@ export function Layout({ children }: LayoutProps) {
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       {/* Add your theme here */}
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-        {children}
+        <Container size="lg" mt="4rem">
+          <MenuBar />
+          {children}
+        </Container>
       </MantineProvider>
     </ColorSchemeProvider>
   );
