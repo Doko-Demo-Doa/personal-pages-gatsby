@@ -1,8 +1,9 @@
-import { Box, Container } from '@mantine/core';
+import { Container } from '@mantine/core';
 import React from 'react';
+import Section1 from '../Sections/Sect1';
 
 export const Home = () => (
   <Container>
-    <Box>sadsada</Box>
+    <Section1 />
   </Container>
 );
